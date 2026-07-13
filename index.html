@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>TASCK</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="startProject">
+    <div class="block">
+      <div class="start_block"></div>
+      
+      <h2 style="font-size: 4rem; display: inline-block;">TASCK</h1>
+    </div>
+  </div>
+  
+  <!-----name project----->
+  <h4>Tasck Client<span class="pwa">PWA</span></h4>
+  <!--<button type="button" onclick="tach()">tach</button>--->
+  <!-----name project----->
+  
+  <!-----create tasck----->
+  <button class="newTasck_btn btn" type="button" onclick="createTasck()">+</button>
+  <!-----create tasck----->
+  
+  <!-----sumTasck----->
+  <div class="sumTascks">0</div>
+<!-----sumTasck----->
+  <!-----renderTasck----->
+  <div id="app"></div>
+  <!-----renderTasck----->
+  
+  <!-----modalTasck----->
+  <div class="modalDialog"></div>
+  <!-----modalTasck----->
+  
+  <div class="footerFilter">
+    
+    <button class="btn_filter" type="button" onclick="openCloseFilter()">filter</button>
+    
+    <div class="element_filter">
+      
+      <button type="button" class="btn_element_filter" onclick="getFilter('0')">все</button>
+      
+      <button class="btn_element_filter" type="button" onclick="getFilter('1')">завершенные</button>
+      
+      <button class="btn_element_filter" type="button" onclick="getFilter('2')">новые</button>
+      
+      <button class="btn_element_filter" type="button"onclick="getFilter('3')">сохраненные</button>
+      
+      <button class="btn_element_filter" type="button" onclick="getFilter('4')">текущие</button>
+      
+    </div>
+  </div>
+  
+  <script src="main.js"></script>
+</body>
+
+</html>
