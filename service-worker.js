@@ -1,5 +1,7 @@
-const CACHE_NAME = "tasck-cache-v1";
-const BASE_PATH = "/Tasck-/";
+const CACHE_NAME = "tasck-cache-v2";
+
+// Берём первую часть пути после "/"
+const BASE_PATH = "/" + location.pathname.split("/")[1] + "/";
 
 const urlsToCache = [
   BASE_PATH,
