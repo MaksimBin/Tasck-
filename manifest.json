@@ -1,20 +1,20 @@
 {
-  "name": "Иудушка",
-  "short_name": "Иудушка",
+  "name": "Tasck PWA",
+  "short_name": "Tasck",
   "start_url": "/Tasck-/index.html",
   "scope": "/Tasck-/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
-  "orientation": "portrait",
+  "description": "Progressive Web App для проекта Tasck",
   "icons": [
     {
-      "src": "icons/icon-192.png",
+      "src": "/Tasck-/icons/icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icons/icon-512.png",
+      "src": "/Tasck-/icons/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
