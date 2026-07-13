@@ -4,6 +4,7 @@ const urlsToCache = [
   "/index.html",
   "/style.css",
   "/main.js",
+  "/manifest.json",
   "/icons/icon-192.png",
   "/icons/icon-512.png"
 ];
@@ -13,9 +14,11 @@ self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
   );
+  // сразу активируем воркер
+  self.skipWaiting();
 });
 
-// Активация: очистка старого кэша
+// Активация: очистка старого кэша и захват клиентов
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys().then(names =>
@@ -24,6 +27,8 @@ self.addEventListener("activate", event => {
       }))
     )
   );
+  // сразу начинаем управлять страницами
+  self.clients.claim();
 });
 
 // Перехват запросов: сначала кэш, потом сеть
